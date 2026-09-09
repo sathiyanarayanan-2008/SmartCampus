@@ -20,6 +20,10 @@ public class CustomUserDetails implements UserDetails {
         return user;
     }
 
+    public String getId() {
+        return user.getId();
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + user.getRole().name()));

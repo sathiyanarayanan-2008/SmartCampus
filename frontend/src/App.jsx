@@ -28,6 +28,18 @@ import UsersPage from './pages/UsersPage';
 import ReportsPage from './pages/ReportsPage';
 import AuditLogsPage from './pages/AuditLogsPage';
 
+// New ERP Pages
+import CourseEnrollmentPage from './pages/CourseEnrollmentPage';
+import TimetablePage from './pages/TimetablePage';
+import AttendancePage from './pages/AttendancePage';
+import LessonPlanPage from './pages/LessonPlanPage';
+import ScorePage from './pages/ScorePage';
+import FeeDetailsPage from './pages/FeeDetailsPage';
+import ExamRegistrationPage from './pages/ExamRegistrationPage';
+import ResultPage from './pages/ResultPage';
+import FeedbackPage from './pages/FeedbackPage';
+import ReceiptsPage from './pages/ReceiptsPage';
+
 function App() {
   return (
     <ThemeProvider>
@@ -66,6 +78,38 @@ function App() {
               } />
               <Route path="/profile" element={
                 <ProtectedRoute><ProfilePage /></ProtectedRoute>
+              } />
+
+              {/* ERP Academic Routes */}
+              <Route path="/courses" element={
+                <ProtectedRoute><CourseEnrollmentPage /></ProtectedRoute>
+              } />
+              <Route path="/timetable" element={
+                <ProtectedRoute><TimetablePage /></ProtectedRoute>
+              } />
+              <Route path="/attendance" element={
+                <ProtectedRoute><AttendancePage /></ProtectedRoute>
+              } />
+              <Route path="/lesson-plans" element={
+                <ProtectedRoute><LessonPlanPage /></ProtectedRoute>
+              } />
+              <Route path="/scores" element={
+                <ProtectedRoute><ScorePage /></ProtectedRoute>
+              } />
+              <Route path="/fee-details" element={
+                <ProtectedRoute><FeeDetailsPage /></ProtectedRoute>
+              } />
+              <Route path="/exam-registration" element={
+                <ProtectedRoute><ExamRegistrationPage /></ProtectedRoute>
+              } />
+              <Route path="/results" element={
+                <ProtectedRoute><ResultPage /></ProtectedRoute>
+              } />
+              <Route path="/feedback" element={
+                <ProtectedRoute><FeedbackPage /></ProtectedRoute>
+              } />
+              <Route path="/receipts" element={
+                <ProtectedRoute><ReceiptsPage /></ProtectedRoute>
               } />
 
               {/* Admin Routes */}
